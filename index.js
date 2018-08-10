@@ -15,7 +15,7 @@ function distanceTravelledInFeet (start, destination){
 function calculatesFarePrice (start, destination){
   if (distanceTravelledInFeet(start, destination) < 400) {
     return 0
-  } else if (distanceTravelledInFeet(start, destination) >= 400 && Math.abs((start - destination) * 264) < 2000) {
+  } else if (distanceTravelledInFeet(start, destination) >= 400 && distanceTravelledInFeet(start, destination) < 2000) {
     return .02 * (Math.abs((start - destination) * 264) - 400)
   } else if (Math.abs((start - destination) * 264) >= 2000 && Math.abs((start - destination) * 264) < 2500) {
     return 25
